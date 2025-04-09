@@ -1,0 +1,132 @@
+.mywork {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 10%; /* Works well for desktop, adjusted below */
+}
+
+.mywork-title {
+    position: relative;
+}
+
+.mywork-title h1 {
+    padding: 0 30px;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.mywork-title img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.mywork-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.mywork-container img {
+    width: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.mywork-container img:hover {
+    transform: scale(1.1);
+    border: 4px solid #ff00ff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.mywork-showmore {
+    display: flex;
+    gap: 10px;
+    border-radius: 50px;
+    border: 2px solid white;
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.mywork-showmore:hover {
+    gap: 30px;
+    transition: 0.6s;
+}
+
+/* Tablet and Larger Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .mywork {
+        gap: 50px;
+        margin: 50px 5%; /* Changed to percentage for fluidity */
+        align-items: center; /* Changed to center for balance */
+    }
+
+    .mywork-title h1 {
+        padding: 0 15px; /* Reduced padding */
+        font-size: 40px; /* Reduced from 50px */
+    }
+
+    .mywork-title img {
+        width: 100px; /* Reduced from 130px */
+        right: 0; /* Adjusted alignment */
+    }
+
+    .mywork-container {
+        grid-template-columns: 1fr 1fr; /* Already set, kept as is */
+        gap: 20px; /* Slightly reduced */
+    }
+
+    .mywork-container img {
+        width: 100%;
+        height: auto; /* Changed to auto for proper aspect ratio */
+    }
+
+    .mywork-showmore {
+        padding: 16px 30px; /* Slightly smaller */
+        font-size: 18px;
+        margin: 40px auto; /* Slightly reduced from 50px */
+    }
+}
+
+/* Smaller Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .mywork {
+        gap: 30px;
+        margin: 30px 5%; /* Further reduced */
+    }
+
+    .mywork-title h1 {
+        padding: 0 10px;
+        font-size: 32px; /* Further reduced */
+    }
+
+    .mywork-title img {
+        width: 80px; /* Further reduced */
+    }
+
+    .mywork-container {
+        grid-template-columns: 1fr; /* Single column for small screens */
+        gap: 15px; /* Further reduced */
+    }
+
+    .mywork-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .mywork-showmore {
+        padding: 14px 25px; /* Further reduced */
+        font-size: 16px;
+        margin: 30px auto; /* Further reduced */
+        width: 100%; /* Full width for easier tapping */
+        text-align: center;
+    }
+}

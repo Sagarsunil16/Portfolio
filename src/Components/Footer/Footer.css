@@ -1,0 +1,165 @@
+.footer {
+    margin: 50px 10%; /* Works well for desktop, adjusted below */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-top-left p {
+    font-size: 16px;
+    max-width: 450px;
+}
+
+.footer-top-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-email-input {
+    display: flex;
+    gap: 20px;
+    padding: 15px 20px;
+    border-radius: 50px;
+    background: #32323b;
+}
+
+.footer-email-input input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #a0a0a0;
+    font-family: Outfit;
+    font-size: 18px;
+    width: 100%; /* Ensures input fills available space */
+}
+
+.footer-subscribe {
+    font-size: 16px;
+    padding: 18px 40px;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.footer-subscribe:hover {
+    transform: scale(1.08);
+    transition: 0.5s;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.footer-bottom-right {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.footer-email-input:hover {
+    border: 2px solid white;
+}
+
+/* Tablet and Larger Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .footer {
+        margin: 40px 5%; /* Adjusted to percentage for fluidity */
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 30px; /* Reduced from 50px for tighter spacing */
+    }
+
+    .footer-top-left p {
+        font-size: 14px; /* Slightly smaller for readability */
+    }
+
+    .footer-email-input {
+        padding: 12px 14px;
+        max-width: 300px; /* Increased from 200px for usability */
+        width: 100%; /* Ensures it scales with container */
+    }
+
+    .footer-email-input input {
+        font-size: 16px;
+    }
+
+    .footer-subscribe {
+        font-size: 14px;
+        padding: 14px 20px;
+    }
+
+    .footer-email-input img {
+        display: none; /* Already hidden, good choice */
+    }
+
+    .footer-bottom {
+        flex-direction: column-reverse;
+        gap: 20px; /* Added gap for spacing */
+        margin-bottom: 40px; /* Slightly reduced */
+    }
+
+    .footer-bottom-right {
+        gap: 20px; /* Reduced for smaller screens */
+    }
+}
+
+/* Smaller Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .footer {
+        margin: 30px 5%; /* Further reduced */
+        gap: 20px;
+    }
+
+    .footer-top {
+        gap: 20px; /* Further reduced */
+    }
+
+    .footer-top-left p {
+        font-size: 13px; /* Slightly smaller */
+        max-width: 100%; /* Full width for small screens */
+    }
+
+    .footer-top-right {
+        flex-direction: column; /* Stack input and button */
+        gap: 10px;
+        width: 100%; /* Full width */
+    }
+
+    .footer-email-input {
+        padding: 10px 12px;
+        max-width: none; /* Remove max-width constraint */
+        width: 100%; /* Full width */
+    }
+
+    .footer-email-input input {
+        font-size: 14px;
+    }
+
+    .footer-subscribe {
+        font-size: 13px;
+        padding: 12px 18px;
+        width: 100%; /* Full width for consistency */
+    }
+
+    .footer-bottom {
+        font-size: 14px; /* Reduced */
+        gap: 15px;
+    }
+
+    .footer-bottom-right {
+        flex-direction: column; /* Stack items */
+        gap: 10px;
+        text-align: center; /* Center for better look */
+    }
+}

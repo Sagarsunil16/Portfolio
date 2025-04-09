@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif; /* Consistent font-family */
+}
+
+body {
+  min-height: 100vh; /* Changed from height to min-height for flexibility */
+  background: #1A202C;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased; /* Improved text rendering */
+  -moz-osx-font-smoothing: grayscale; /* Improved text rendering */
+}
+
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 768px) {
+  body {
+      font-size: 16px; /* Base font size for readability */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      font-size: 14px; /* Slightly smaller for compact screens */
+  }
+}

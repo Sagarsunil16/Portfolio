@@ -1,0 +1,142 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 10%; /* Works well for desktop, adjusted below */
+}
+
+.logo {
+    width: 100px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    font-size: 16px;
+}
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.nav-connect {
+    padding: 15px 20px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-connect:hover {
+    transform: scale(1.05);
+}
+
+.nav-menu li img {
+    display: flex;
+    margin: auto;
+}
+
+.anchor-link {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-mob-close {
+    display: none;
+}
+
+.nav-mob-open {
+    display: none;
+}
+
+/* Tablet and Larger Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        margin: 20px 5%; /* Changed to percentage for fluidity */
+        position: relative; /* Added for better positioning context */
+    }
+
+    .nav-connect {
+        display: none; /* Already hidden, kept as is */
+    }
+
+    .nav-mob-open {
+        display: block;
+        position: absolute;
+        right: 20px; /* Slightly reduced from 30px */
+        width: 30px; /* Explicit width for consistency */
+        cursor: pointer;
+    }
+
+    .nav-mob-close {
+        display: block;
+        position: absolute; /* Changed to absolute for better control */
+        top: 20px; /* Reduced from 30px */
+        left: auto; /* Removed fixed 290px */
+        right: 20px; /* Positioned relative to menu width */
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        position: fixed;
+        flex-direction: column;
+        align-items: flex-start; /* Fixed typo from 'start' */
+        top: 0;
+        gap: 30px;
+        background: #1f0016;
+        width: 300px; /* Slightly reduced from 350px */
+        height: 100%;
+        z-index: 2;
+        transition: right 0.5s;
+        right: -300px; /* Adjusted to match width */
+    }
+
+    .nav-menu li {
+        font-size: 24px; /* Reduced from 30px for better fit */
+        padding-left: 40px; /* Reduced from 100px for smaller menu */
+        flex-direction: row;
+        gap: 15px; /* Reduced from 20px */
+        width: 100%; /* Full width for consistency */
+    }
+}
+
+/* Smaller Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        margin: 15px 5%; /* Slightly reduced */
+    }
+
+    .logo {
+        width: 80px; /* Reduced for smaller screens */
+    }
+
+    .nav-mob-open {
+        right: 15px; /* Further reduced */
+        width: 25px; /* Smaller icon */
+    }
+
+    .nav-mob-close {
+        top: 15px;
+        right: 15px;
+        width: 25px;
+    }
+
+    .nav-menu {
+        width: 250px; /* Further reduced for small screens */
+        right: -250px; /* Adjusted to match width */
+        gap: 20px; /* Reduced from 30px */
+    }
+
+    .nav-menu li {
+        font-size: 20px; /* Further reduced */
+        padding-left: 30px; /* Further reduced */
+        gap: 10px;
+    }
+}

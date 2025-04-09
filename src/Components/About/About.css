@@ -1,0 +1,226 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin: 70px 10%; /* Works well for desktop, adjusted below for mobile */
+}
+
+.about-title {
+    position: relative;
+}
+
+.about-title h1 {
+    padding: 0 30px;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.about-left img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.about-title img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.about-sections {
+    display: flex;
+    gap: 80px;
+}
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.about-para {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.about-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-skill {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.about-skill p {
+    min-width: 130px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.about-skill hr {
+    outline: none;
+    border: none;
+    width: 50%;
+    height: 8px;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #DF8908 -5.09%, #BF15FF 106.28%);
+}
+
+.about-achievements {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.about-achievement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: 0.5s;
+}
+
+.about-achievement h1 {
+    font-size: 40px;
+    font-weight: 700;
+    background: linear-gradient(264deg, #DF8908 -5.09%, #BF15FF 106.28%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-achievement p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.about-skill:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.about-achievement:hover {
+    transform: scale(1.12);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* Tablet and Mobile Adjustments (max-width: 768px) */
+@media (max-width: 768px) {
+    .about {
+        gap: 50px; /* Reduced from 80px for tighter spacing */
+        margin: 40px 5%; /* Reduced margin for smaller screens */
+        align-items: center; /* Changed to center for better balance */
+    }
+
+    .about-title h1 {
+        font-size: 40px; /* Slightly smaller than 50px for better fit */
+        padding: 0 15px; /* Adjusted padding */
+    }
+
+    .about-title img {
+        width: 100px; /* Slightly smaller than 130px */
+        right: 0; /* Adjusted for better alignment */
+    }
+
+    .about-sections {
+        flex-direction: column;
+        gap: 40px; /* Reduced gap for mobile */
+    }
+
+    .about-left {
+        display: none; /* Already hidden, good choice */
+    }
+
+    .about-para {
+        font-size: 16px; /* Slightly smaller for readability */
+        line-height: 28px; /* Adjusted for better spacing */
+    }
+
+    .about-skill p {
+        font-size: 18px; /* Slightly smaller */
+        min-width: 100px; /* Reduced for smaller screens */
+    }
+
+    .about-skill hr {
+        height: 6px;
+        width: 40%; /* Slightly shorter for mobile */
+    }
+
+    .about-achievements {
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        gap: 20px; /* Add gap for wrapped items */
+        justify-content: center; /* Center items when wrapped */
+    }
+
+    .about-achievement h1 {
+        font-size: 30px; /* Slightly smaller than 34px */
+    }
+
+    .about-achievement p {
+        font-size: 14px; /* Slightly smaller */
+        text-align: center;
+    }
+}
+
+/* Additional Mobile Adjustments (max-width: 480px) */
+@media (max-width: 480px) {
+    .about {
+        gap: 30px;
+        margin: 20px 5%; /* Even smaller margins */
+    }
+
+    .about-title h1 {
+        font-size: 32px; /* Further reduced */
+        padding: 0 10px;
+    }
+
+    .about-title img {
+        width: 80px; /* Smaller for tiny screens */
+    }
+
+    .about-right {
+        gap: 40px; /* Reduced gap */
+    }
+
+    .about-para {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .about-skill {
+        flex-direction: column; /* Stack for very small screens */
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .about-skill p {
+        font-size: 16px;
+        min-width: unset; /* Remove min-width constraint */
+    }
+
+    .about-skill hr {
+        width: 70%; /* Wider to fill space */
+        height: 5px;
+    }
+
+    .about-achievement h1 {
+        font-size: 24px;
+    }
+
+    .about-achievement p {
+        font-size: 12px;
+    }
+}
